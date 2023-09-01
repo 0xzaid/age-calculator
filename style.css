@@ -1,0 +1,271 @@
+:root {
+  --background: #f0f0f0;
+  --card-background: #fff;
+  --primary: hsl(228, 45%, 44%);
+
+  /* Colors */
+
+  /* Primary */
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+  /* Neutral */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+  /* Typography */
+  --font-size-inputs: 32px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400i, 700i, 800i;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins-ExtraBold;
+  font-weight: 400, 700, 800;
+  src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+input {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 15px;
+  border-bottom-right-radius: 175px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 35%;
+  padding: 60px 60px 0px 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-bottom: 20px;
+}
+
+.input {
+  /* Make inputs evenly spaced and with the same exact width */
+  width: 70px;
+}
+
+button {
+  background: var(--primary-purple);
+  border-radius: 50%;
+  color: inherit;
+  border: none;
+  padding: 20px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  top: 27%;
+}
+
+button:active {
+  background: var(--neutral-off-black);
+}
+
+
+.btn {
+  width: 20%;
+  float: right;
+
+}
+
+.icon-arrow {
+  background: url("./assets/images/icon-arrow.svg") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+
+/* input,
+label {
+  display: block;
+} */
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: Poppins-ExtraBold;
+  color: var(--neutral-smokey-grey);
+  letter-spacing: 4px;
+}
+
+input {
+  border-radius: 5px;
+  font-size: 32px;
+  padding: 10px;
+  width: 170%;
+  font-family: Poppins-ExtraBold;
+  /* Adjusted to take up full width */
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+hr {
+  border: 1px solid hsl(0, 0%, 86%);
+  margin: 20px 0;
+  width: 85%;
+  margin: 0 auto;
+  float: left;
+}
+
+.output {
+  margin-top: 40px;
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  font-family: Poppins-ExtraBold;
+}
+
+.age-result {
+  text-align: left;
+  font-size: 5.5rem;
+  font-weight: 900;
+  letter-spacing: -3px;
+  color: var(--primary-purple);
+  margin-right: 10px;
+}
+
+#year_output,
+#month_utput,
+#day_output {
+  text-align: left;
+  margin: -30px 5px;
+  /* Add 5px margin for top and bottom spacing */
+}
+
+.error-msg {
+  color: var(--primary-light-red);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 200%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* Media Queries */
+/* 
+- Mobile: 375px - Desktop: 1440px
+*/
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+  .card {
+    width: 80%;
+    padding: 40px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .output {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .age-result {
+    font-size: 3.5rem;
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+  .card {
+    width: 80%;
+    padding: 40px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .input {
+    width: 13%;
+    /* Inputs take full width */
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 29%;
+    left: -5%;
+  }
+
+  hr {
+    width: 100%;
+    margin: 30px 0; 
+    float: left;
+  }
+
+  .output {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .age-result {
+    font-size: 3.5rem;
+  }
+}
